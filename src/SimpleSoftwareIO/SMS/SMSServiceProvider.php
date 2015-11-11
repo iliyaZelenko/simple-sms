@@ -49,7 +49,7 @@ class SMSServiceProvider extends ServiceProvider
 
             //Set the from and pretending settings
             if ($app['config']->has('sms.from')) {
-                $sms->alwaysFrom($app['config']['sms']['form']);
+                $sms->alwaysFrom($app['config']['sms']['from']);
             }
             $sms->setPretending($app['config']->get('sms.pretend', false));
 
